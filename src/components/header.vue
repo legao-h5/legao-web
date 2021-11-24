@@ -18,7 +18,7 @@
           @select="(path) => handleSelect(path)"
       >
         <a-menu-item>
-          <a href="https://github.com/coco-h5/coco-web" target="_blank">
+          <a href="https://github.com/legao-h5/coco-web" target="_blank">
             Github
           </a>
         </a-menu-item>

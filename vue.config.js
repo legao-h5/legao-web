@@ -1,6 +1,18 @@
 module.exports = {
   devServer: {
+    port:8080,
     disableHostCheck: true,
+    proxy: {
+      // 配置跨域
+      '/project': {
+        target: 'http://localhost:7001',
+        // ws:true,
+        changOrigin: true,
+        // pathRewrite: {
+        //   '^/api': '/',
+        // },
+      },
+    },
   },
   configureWebpack: config => {
     config.optimization = {

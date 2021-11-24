@@ -35,8 +35,8 @@
       <a-form-item label="活动域名" v-bind="validateInfos.gitName">
         <a-input-group  compact>
           <a-select v-model:value="host">
-            <a-select-option value="https://coco-h5.github.io/">
-              https://coco-h5.github.io/
+            <a-select-option value="https://legao-h5.github.io/">
+              https://legao-h5.github.io/
             </a-select-option>
           </a-select>
           <a-input
@@ -58,8 +58,9 @@ import { useForm } from '@ant-design-vue/use';
 import {market} from '@/api';
 import {useRouter} from 'vue-router';
 import { message } from 'ant-design-vue';
+import {defineComponent} from "@vue/runtime-core"
 
-export default {
+export default defineComponent({
   setup() {
     const state = reactive({
       templateList: [],
@@ -71,7 +72,7 @@ export default {
     const pageState = reactive({
       projectName: '',
       gitName: '',
-      host: ' https://coco-h5.github.io/'
+      host: ' https://legao-h5.github.io/'
     });
 
     const rulesRef = reactive({
@@ -151,7 +152,7 @@ export default {
   components: {
     Header,
   }
-}
+})
 </script>
 
 <style>

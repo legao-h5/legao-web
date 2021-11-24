@@ -4,7 +4,9 @@ import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import router from './router';
 import store from './store'
-document.domain = "coco-h5.cn" // 设置同域
+if(process.env.NODE_ENV === 'production'){
+  document.domain = "coco-h5.cn" // 设置同域
+}
 
 import {
   FileImageOutlined,
